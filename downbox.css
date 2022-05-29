@@ -1,0 +1,41 @@
+/*아래 쪽의 텍스트 버튼이 있는 검은색 줄의 메뉴*/
+/*메뉴 생성*/.downbox {
+width: 100%;
+height: 50px;
+background-color: greenyellow;
+position: relative;
+}
+/*메뉴 중앙 정렬*/.downbox_sort {
+margin: 0 auto;
+overflow: hidden;
+width: 1300px;
+}
+/*버튼 정렬*/.downbox_button {
+position: absolute;
+top: 15px;
+}
+
+
+/*맨 아래 주소 적힌 박스*/
+/*박스 생성*/.downbox2{
+width: 100%;
+height: 110px;
+background-color: whitesmoke;
+}
+/*박스 중앙 정렬*/.downbox2_sort {
+margin: 0 auto;
+overflow: hidden;
+width: 1300px;
+}
+/*텍스트 위치 조정*/.box3 {
+margin: 0 3px;
+float: left;
+padding: 10px;
+}
+/*동서대 로고 이미지 위치 조정*/.DSU_mini {
+width: 100%;
+height: 100%;
+}
+/*동서대 로고 이미지 위치 조정2*/.DSU_mini_2 {
+float: left;
+}

@@ -1,0 +1,73 @@
+/*공지사항과 팝업존 중앙 정렬*/.middle_menu_sort {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1300px;
+    height: 225px;
+}
+/*공지사항 가로 정렬 및 높이 공간 설정*/.announcement_section {
+    position: relative;
+    width: 500px;
+    height: 255px;
+    float: left;
+    display: inline-block;
+}
+/*공지사항 버튼 생성*/.announcement_button {
+border: none;
+color: black;
+padding: 8px 18px;
+text-align: center;
+text-decoration: none;
+font-size: 17px;
+cursor: pointer;
+margin: 0px 5px;
+}
+/*공지사항 버튼 밑의 리스트*/.announcement_list {
+top:10px;
+border: none;
+color: black;
+padding: 2px 5px;
+text-decoration: none;
+cursor: pointer;
+margin: 2px 0;
+}
+/*학과뉴스 가로 정렬 및 높이 공간 설정*/.news_section {
+    position: absolute;
+    width: 500px;
+    height: 255px;
+    display: inline-block;
+}
+/*학과뉴스 버튼 생성*/.news_button {
+    border: none;
+    color: black;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+/*학과뉴스 버튼 밑의 리스트*/.news_list {
+    top:10px;
+    border: none;
+    color: black;
+    padding: 2px 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 2px 0;
+    }
+/*팝업 존 제목 박스 생성 및 위치 조정*/.popupbox_title_box {
+    width: 240px;
+    height: 55px;
+    background-color: grey;
+    display: inline-block;
+    float: right;
+}
+/*팝업 존 제목텍스트 위치 조정*/.popupbox_title {
+    text-align: center;
+    line-height: 55px;
+    color: white;
+}
+/*팝업 존 이미지 위치조정*/.popupbox_image_box{
+    top: 55px;
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동서대학교 컴퓨터공학과</title>
+    <link rel="stylesheet" href="topbar.css">
+    <link rel="stylesheet" href="main_menu.css">
+    <link rel="stylesheet" href="middle.css">
+    <link rel="stylesheet" href="downbox.css">
+    <link rel="stylesheet" href="submenubutton.css">
+    <style>
+        body {
+	    background: rgb(255, 255, 255); margin: 50px 0;
+        }
+        #mainbox {
+        color:burlywood; width:80%; height: 40px; background: rgb(255, 255, 255);
+        }
+        
+        .sub {
+        display: none; position: absolute;  top: 30px;  left: 0; z-index: 1; width: 100%; background: #eee; opacity: 0.8;
+        }
+        #mainbox-menus {
+    	width: 600px; margin: 0 auto; list-style: none; padding: 0; text-align: center; font-size: 0; display: table;
+        }
+        #mainbox-menus > li {
+	    width: 200px; height: 40px; display: table-cell; vertical-align: middle; text-align: center; font-size: 14px; color:burlywood;
+        }   
+        #mainbox-menus > li > a {
+	        display: table-cell; vertical-align: middle; width: 200px; height: 40px; text-decoration: none; color: burlywood;
+        }
+        #mainbox-menus > li > div {
+	    position: absolute; background: #FFF; color: burlywood; left: 0; width: 100%; top: auto; display: none;
+	    padding: 50px 0; z-index: 10;
+        }
+        
+    </style>
+    <style media="screen">
+        *{
+          margin: 0; padding: 0;
+        }
+        .slide{
+         overflow: hidden;  position: relative; margin: 0 auto;
+        }
+        .slide ul{
+         position: absolute;  top:0; left:0; font-size: 0;
+        }
+        .slide ul li{
+          display: inline-block;
+        }
+        #back{
+          position: absolute; top: 250px; left: 0; cursor: pointer; z-index: 1;
+        }
+        #next{
+          position: absolute; top: 250px; right: 0; cursor: pointer; z-index: 1;
+        }
+       </style>
+
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script>
+         $link = $('.youtube').find('a').clone().text('');  //하이퍼링크 설정
+         $('.youtube2').contents().wrap($link);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function() {
+	$("#mainbox li").mouseenter(function(event) 
+    {
+		$(this).find("div").parent().css("background","burlywood");
+		$(this).find("div").parent().children("a").css("color", "white");
+		$(this).find("div").slideDown("normal");
+	})
+    .mouseleave(function() {
+		$(this).find("div:visible").slideUp(50, function() 
+        {
+            	// #mainbox-menus li:hover 처리를 하지 않을 경우 아래 라인 활성,
+			$(this).parent().css("background", "#666");
+			$(this).parent().children("a").css("color", "#000");
+		});
+	});
+    });
+</script>
+<script type="text/javascript"> 
+    imgslide(); //페이지가 로딩될때 함수를 실행합니다
+function imgslide(){
+
+  $let = $("#slide").attr("let"); //현재 이미지 번호를 가져옵니다
+  $mx = $("#slide").attr("mx"); //총 이미지 개수를 가져옵니다
+        $("#img"+$let).hide(); //현재 이미지를 사라지게 합니다.
+            if( $let == $mx ){ $let = 1; } //현재이미지가 마지막 번호라면 1번으로 되돌립니다.
+            else{ $let++; } //마지막 번호가 아니라면 카운트를 증가시켜줍니다
+        $("#img"+$let).fadeIn(500); //변경된 번호의 이미지영역을 나타나게 합니다.괄호 안에 숫자는 페이드인 되는 시간을 나타냅니다.
+        $("#slide").attr('let',$let); //변경된 이미지영역의 번호를 부여합니다.
+        setTimeout('imgslide()',5000); //1초 뒤에 다시 함수를 호출합니다.(숫자값 1000당 1초)
+
+}
+
+
+</script>
+    
+</head>
+<body>
+    <div class="topbar"><!--맨 위 검은 배경 메뉴-->
+        <div class="topbar_sort">
+            <div class="topbar_left_menu">
+                <button class="topbar_left_button">동서대학교</button>
+                <button class="topbar_left_button">입학</button>
+            </div>
+            <div class="topbar_right_menu">
+                <button class="topbar_right_button">홈</button>
+                <button class="topbar_right_button">로그인</button>
+                <button class="topbar_right_button">소프트웨어융합대학</button>
+                <button class="topbar_right_button">소프트웨어중심대학사업단</button>
+            </div>
+        </div>
+    </div>
+    <div class="upbox"> <!--맨 위 하얀 배경 메뉴-->
+        <div class="box">
+            <div class="DSU_logo">
+                <img src="tpl_logo.png" alt="DSU logo">
+            </div>
+        </div>
+        <div class="box">
+            <div class="CS_text">
+                <b>컴퓨터공학과</b>
+            </div>
+        </div>
+        <div id="mainbox">
+            <ul id="mainbox-menus">
+                <li>
+                    <a href="#">학과소개</a>
+                    <div><p>
+                        <ul id="menu">
+                            <li class="sub_menu_button"><a href="https://uni.dongseo.ac.kr/computereng/index.php?pCode=introduce">학과소개</a></li>
+                            <li class="sub_menu_button"><a href="https://uni.dongseo.ac.kr/computereng/index.php?pCode=MN4000012">교수소개</a></li>
+                            <li class="sub_menu_button"><a href="https://uni.dongseo.ac.kr/computereng/index.php?pCode=MN4000013">교육목표</a></li>
+                            <li class="sub_menu_button"><a href="https://uni.dongseo.ac.kr/computereng/index.php?pCode=MN4000014">시설장비</a></li>
+                            <li class="sub_menu_button"><a href="https://uni.dongseo.ac.kr/computereng/index.php?pCode=location">오시는길</a></li>
+                            <li class="sub_menu_button"><a href="https://uni.dongseo.ac.kr/computereng/index.php?pCode=MN4000045">교과과정</a></li>
+                        </ul>
+                    </p></div>		
+                </li>
+                <li>
+                    <a href="#">학과소식</a>
+                    <div><p>
+                        <ul id="menu">
+                            <li class="sub_menu_button"><a href="https://uni.dongseo.ac.kr/computereng/index.php?pCode=MN4000017">공지사항</a></li>
+                            <li class="sub_menu_button"><a href="https://uni.dongseo.ac.kr/computereng/index.php?pCode=MN4000018">학과뉴스</a></li>
+                        </ul>
+                    </p></div>		
+                </li>
+                <li>
+                    <a href="#">학생활동</a>
+                    <div><p>
+                        <ul id="menu">
+                            <li class="sub_menu_button"><a href="https://uni.dongseo.ac.kr/computereng/index.php?pCode=MN4000020">수상/졸업생</a></li>
+                            <li class="sub_menu_button"><a href="https://uni.dongseo.ac.kr/computereng/index.php?pCode=MN4000033">연구회</a></li>
+                        </ul>
+                    </p></div>		
+                </li>
+                <li>
+                    <a href="#">입학&취업</a>
+                    <div><p>
+                        <ul id="menu">
+                            <li class="sub_menu_button"><a href="https://uni.dongseo.ac.kr/computereng/index.php?pCode=MN4000022">입학 FAQ</a></li>
+                            <li class="sub_menu_button"><a href="https://uni.dongseo.ac.kr/computereng/index.php?pCode=MN4000023">입학 Q&A</a></li>
+                            <li class="sub_menu_button"><a href="https://ipsi.dongseo.ac.kr/ipsi/">입학홈페이지</a></li>
+                            <li class="sub_menu_button"><a href="https://uni.dongseo.ac.kr/computereng/index.php?pCode=MN4000043">취업 및 진로</a></li>
+                            <li class="sub_menu_button"><a href="https://uni.dongseo.ac.kr/computereng/index.php?pCode=MN4000025">취업정보</a></li>
+                            <li class="sub_menu_button"><a href="https://uni.dongseo.ac.kr/job/">취업홈페이지</a></li>
+                        </ul>
+                    </p></div>		
+                </li>
+                <li>
+                    <a href="#">입시</a>
+                    <div><p>
+                        <ul id="menu">
+                            <li class="sub_menu_button"><a href="https://uni.dongseo.ac.kr/computereng/index.php?pCode=MN4000040">입시Q&A</a></li>
+                        </ul>
+                    </p></div>		
+                </li>
+            </ul>
+        </div>
+     
+            
+
+        </div>
+        <div class="box">
+            <div class="DSU_SW">
+                <img src="sw_menu.jpg" alt="DSU S.W.">
+            </div>
+        </div>
+    </div>
+
+    
+ <div id="slide" let="1" mx="2">
+	<li id="img1">
+        <a href="https://www.youtube.com/watch?v=s6P9d0W0mB0"target='_blank'><img src="main_1556102318.jpg", alt=""/></a>
+    </li>
+	<li id="img2">
+        <a href="https://www.youtube.com/watch?v=s6P9d0W0mB0"target='_blank'><img src="mvis_03.jpg" alt=""/></a>
+    </li>
+</div>
+    <div class="middle_menu_sort"><!--공지사항과 팝업창이 뜨는 곳-->
+        <div class="sort">
+            <div class="announcement_section">
+                <button class="announcement_button">공지사항</button>
+                <ul>
+                    <li class="announcement_list">공지사항1</li>
+                    <li class="announcement_list">공지사항2</li>
+                    <li class="announcement_list">공지사항3</li>
+                    <li class="announcement_list">공지사항4</li>
+                    <li class="announcement_list">공지사항5</li>
+                </ul>
+            </div>
+            <div class="news_section">
+                <button class="news_button">학과뉴스</button>
+                <ul>
+                    <li class="news_list">학과뉴스1</li>
+                    <li class="news_list">학과뉴스2</li>
+                    <li class="news_list">학과뉴스3</li>
+                    <li class="news_list">학과뉴스4</li>
+                    <li class="news_list">학과뉴스5</li>
+                </ul>
+            </div>
+        </div>
+        <div class="sort">
+            <div class="popupbox_title_box">
+                <p class="popupbox_title"><b>POPUP ZONE</b></p>
+                    <div class="popupbox_image_box">
+                        <img src="ff4cbd0e0eb6ad496ee98d4c6a6954f6.jpg" alt="DSU C.E. recruit">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="downbox"><!--아래 쪽의 텍스트 버튼이 있는 검은색 줄의 메뉴-->
+        <div class="downbox_sort">
+            <div class="downbox_button">
+                <a href="https://www.dongseo.ac.kr/kr/?pCode=privacy">개인정보처리방침</a>&nbsp;&nbsp;&nbsp;
+                <a href="https://uni.dongseo.ac.kr/computereng/index.php/?pCode=noemail">이메일무단수집거부</a>&nbsp;&nbsp;&nbsp;
+                <a href="https://www.dongseo.ac.kr/kr/index.php?pCode=schtelinfo">교내전화번호</a>
+            </div>
+        </div>
+    </div>
+    <div class="downbox2"><!--맨 아래 주소 적힌 박스-->
+        <div class="downbox2_sort">
+            <div class="box3">
+                <div class="DSU_mini">
+                    <img class="DSU_mini_2" src="flogo.png" alt="DSU_mini">
+                    <div class="box3">
+                        <p><b>(47011) 부산광역시 사상구 주례로 47(주례동) U-IT관 U404호 컴퓨터공학과</b>&nbsp;&nbsp;&nbsp;TEL : 051-320-1749</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

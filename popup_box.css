@@ -1,0 +1,22 @@
+/*팝업 존 수평, 중앙 정렬 및 공간 생성*/.popupbox_sort {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1300px;
+    height: 225px;
+}
+/*팝업 존 제목 박스 생성 및 위치 조정*/.popupbox_title_box {
+    position: relative;
+    width: 240px;
+    height: 55px;
+    background-color: grey;
+    float: right;
+}
+.popupbox_title {
+    text-align: center;
+    line-height: 55px;
+    color: white;
+}
+.popupbox_image_box{
+    position: absolute;
+    top: 55px;
+}

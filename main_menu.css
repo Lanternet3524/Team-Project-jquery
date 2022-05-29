@@ -1,0 +1,43 @@
+/*맨 위의 메뉴 배경*/.upbox {
+margin: 0 auto;
+width: 1300px;
+overflow: hidden;
+height: 80px;
+color: white;
+}
+/*각 요소 위치 지정*/.box {
+top: 30px;
+float: left;
+margin: 0 3px;
+padding: 10px;
+}
+/*컴퓨터공학과 텍스트 위치 및 크기 조정*/.CS_text {
+    display: inline-block;
+top: 20px;
+color: black;
+font-size: 17px;
+}
+/*동서대 로고 이미지 위치 조정*/.DSU_logo {
+    display: inline-block;
+height: 100%;
+top: 20px;
+}
+/*큰 버튼 위치 조정*/.menu_main {
+    display: inline-block;
+top:10px;
+}
+/*큰 버튼 생성 및 가로로 정렬*/.button {
+    border: none;
+    color: black;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+/*오른쪽 로고 위치 조정*/.DSU_SW {
+    display: inline-block;
+top: 10px;
+}
